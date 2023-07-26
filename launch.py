@@ -1,3 +1,5 @@
+import sys
+
 from readchar import readchar
 from random import choice
 
@@ -24,6 +26,8 @@ while enemy_hp > 0 and hp > 0:
     ]
     print("\n".join(info))
     k = readchar()
+    if k == "q":
+        sys.exit(0)
     if k == "d":
         enemy_hp -= 1
     if k == "a":
